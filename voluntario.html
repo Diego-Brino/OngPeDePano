@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bentham&family=Dancing+Script&family=Didact+Gothic&display=swap" rel="stylesheet">
+
+    <title>Seja Voluntário</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="nav">
+                <ul>
+                    <li>
+                        <a href="index.html">
+                        <img src="resources/images/logo_icone.png" alt="Home">
+                        </a>
+                    </li>
+                    <ul>
+                        <li><a href="historia.html">Nossa História</a></li>
+                        <li><a href="parceiros.html">Parceiros</a></li>
+                        <li><a href="FAQ.html">FAQ</a></li>
+                        <li><a href="voluntario.html">Seja Voluntário</a></li>
+                    </ul>
+                    <li><a href="contribua.html">
+                        <img src="resources/images/doacao_icone.png" alt="Contribua">
+                        <p>Contribua</p>
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="voluntario">
+            <article class="flor">
+                <aside class="florEsquerda">
+                    <img src="resources/images/Flor Esquerda.png" alt="florEsquerda">
+                </aside>
+        
+                <aside class="florDireita">
+                    <img src="resources/images/Flor direita.png" alt="florEsquerda">
+                </aside>
+            </article>
+            
+            <section class="logoFormulario">
+                <img src="resources/images/Seja_Voluntário_logo.png" alt="logo_form">
+            </section>
+            
+            <form id="form" action="https://formspree.io/f/meqnjeqa" method="POST">
+                <div class="campoForm">
+                    <label for="Nome Completo:" name="Nome Completo:">
+                        Nome Completo
+                    </label>
+
+                    <input name="Nome Completo:" type="text"  placeholder="Digite seu nome" class="campo"/>
+
+                    <label for="Email" name="Email">
+                        Email
+                    </label>
+        
+                    <input type="email" name="Email:" placeholder="Digite seu email" class="campo"/>
+
+                    <label for="Cidade:" name="Cidade:">
+                        Cidade
+                    </label>
+        
+                    <input type="text" name="Cidade:" placeholder="Digite sua cidade: Ex.: Santo Ângelo - RS" class="campo"/>
+        
+                    <label for="Celular" name="Celular">
+                        Celular
+                    </label>
+        
+                    <input type="number" name="Celular:" placeholder="Digite o mesmo número do seu whatsapp" min="0" class="campo"/>
+
+                    <label> • Como você gostaria de ajudar nossa ONG?</label>
+                    <input type="hidden" name="Como você gostaria de ajudar nossa ONG:"></input>
+                    <input type="hidden" name="(On): Escolho essa opção!"></input>
+
+
+                        <label for="opcao1" name="opcao">
+                            <input type="checkbox" name="No trabalho de manutenção dos animais" class="checkBox">
+                                No trabalho de manutenção dos animais. 
+                            </input>
+                        </label>
+        
+                        <label for="opcao2" name="opcao">
+                            <input type="checkbox" name="Nos eventos de arrecadação de verbas financeiras realizados pela ONG para manutenção dos animais resgatados." class="checkBox">
+                                Nos eventos de arrecadação de verbas financeiras realizados pela ONG para manutenção dos animais resgatados. 
+                            </input>
+                        </label>
+        
+                        <label for="opcao3" name="opcao">
+                            <input type="checkbox" name="Eventos de lutas por implantação de políticas públicas para os animais." class="checkBox">
+                                Eventos de lutas por implantação de políticas públicas para os animais.
+                            </input>
+                        </label>
+        
+                        <label for="opcao4" name="opcao">
+                            <input type="checkbox" name="Eventos de lutas por implantação de políticas públicas para os animais." class="checkBox">
+                                Contribuição financeira mensal.
+                            </input>
+                        </label>
+        
+                        <label for="opcao5" name="opcao">
+                            <input type="checkbox"name="Apadrinhamento de equino." class="checkBox">
+                                Apadrinhamento de equino.
+                            </input>
+                        </label>
+        
+                        <label for="opcao6" name="opcao">
+                            <input type="checkbox" name="Outro:" id="botaoOutro" onclick="checarBox()" class="checkBox">
+                                Outro:
+                            </input>
+        
+                        </label>
+
+                        <textarea id="textArea" name="Digite como você gostaria de ajudar nossa ONG" placeholder="Digite como você gostaria de ajudar."></textarea>
+                </div>
+                <input type="hidden" name="botao" value="arancecristine@yahoo.com"  disabled>
+                    <button type="button" name="botaoform" id="botaoform" onclick="validarForm()">
+                        Enviar
+                    </button>
+                </input>
+            </form>
+            <script type="text/javascript" src="script.js"></script>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <section class="esquerda">
+                <img src="resources/images/footer_escrito.png" alt="texto">
+                <p>Somos a <span>ONG</span> de proteção de equínos <span>Pé de Pano SOS Cavalos</span>. Salvando, resgatando, protegendo e acolhendo cavalos desde 2015 no município de <span>Santo Ângelo/RS.</span></p>
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/ONG-P%C3%A9-de-Pano-SOS-Cavalos-Santo-%C3%82ngeloRS-513254368854726/">
+                            <img src="resources/images/footer_facebook_icone.png" alt="facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/ong_pedepano/">
+                            <img src="resources/images/footer_instagram_icone.png" alt="instagram">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:arancecristine@yahoo.com">
+                            <img src="resources/images/footer_email_icone.png" alt="email">
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section class="meio">
+                <h1>Nos ajude a mudar o mundo</h1>
+                <h2>Doe através do PIX</h2>
+                <img src="resources/images/qr-code.jpeg" alt="PIX">
+                <p>Desenvolvido por Diego Manucci, Diego Brino e Gabriel Lamarca</p>
+            </section>
+            <section class="direita">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="historia.html">Nossa História</a></li>
+                    <li><a href="parceiros.html">Parceiros</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="voluntario.html">Seja Voluntário</a></li>
+                </ul>
+            </section>
+        </div>
+    </footer>
+</body>
+</html>

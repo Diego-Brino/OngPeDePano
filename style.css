@@ -1,0 +1,1081 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+:root {
+    --good-white: #fefefe;
+    --bad-white: #ffffff;
+    --light-pink: #ffcdcd;
+    --normal-pink: #efaaaa;
+    --strong-pink: #c58e8e;
+    --dark-pink: #a77b7b;
+}
+
+/* Geral */
+
+html{
+    overflow-x: hidden;
+    font-size: calc(60% + 0.8vmin);
+}
+body{
+    text-justify: inter-cluster;
+    text-align: justify;
+    justify-content: justify;
+    background-color: var(--light-pink);
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block; 
+}
+
+.container{
+    max-width: 1400px;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* -------------------- header -------------------- */
+
+header{
+    height: 15vh;
+    background-color: var(--light-pink);
+    font-weight: bold;
+    padding: 1.5rem 0;
+}
+header .container{
+    display: flex;
+    align-items: center;
+}
+header .container .nav{
+    width: 100%;
+    height: 100%;
+    max-height: 5rem;
+    border-radius: 15px;
+    background-color: var(--good-white);
+    box-shadow: 0px 0px 40px 5px rgba(0,0,0,0.1);
+}
+header .container .nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+}
+header .container .nav > ul > li{
+    height: 100%;
+}
+header .container .nav > ul > li:first-child{
+    flex: 1;
+    background-color: var(--normal-pink);
+    border-radius: 15px 0 0 15px;
+}
+header .container .nav > ul > li:last-child{
+    flex: 2;
+    background: linear-gradient(90deg, var(--normal-pink),var(--dark-pink), var(--normal-pink));
+    background-size: 200% 200%;
+    background-position: 0 50%;
+    border-radius: 0 15px 15px 0;
+    transition: 1s ease-out;
+}
+header .container .nav > ul > li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 10px;
+}
+header .container .nav > ul > li a p{
+    display: none;
+    color: var(--good-white);
+    font-family: "Didact Gothic";
+}
+header .container .nav ul ul{
+    flex: 15;       
+    height: 100%;
+    gap: 0 15px;
+    justify-content: space-evenly;
+}
+header .container .nav ul ul li{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0 var(--normal-pink);
+    transition: 0.1s ease-out;
+}
+header .container .nav ul ul li a{
+    font-family: "Didact Gothic";
+    color: var(--strong-pink);
+}
+
+/* Hover Contribua */
+
+header .container .nav ul > li:last-child:hover{
+    background-position: 100% 50%;
+}
+header .container .nav ul > li:last-child:hover a img{
+    display: none;
+}
+header .container .nav ul > li:last-child:hover a p{
+    display: block;
+}
+
+/* Hover Links */
+
+header .container .nav ul ul li:hover a{
+    color: var(--normal-pink);
+}
+header .container .nav ul ul li:hover{
+    border-top: 3px solid var(--normal-pink);   
+}
+
+/* -------------------- index -------------------- */
+
+/* introducao */
+
+.index .introducao{
+    height: 85vh;
+    background-color: var(--light-pink);
+}
+.index .introducao .container .topo{
+    height: 75vh;
+    display: flex;
+    gap: 4rem;
+}
+.index .introducao .container .topo .esquerda{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+    gap: 2rem;
+}
+.index .introducao .container .topo .esquerda img{
+    width: 90%;
+}
+.index .introducao .container .topo .esquerda p{
+    font-family: "Bentham";
+    color: var(--strong-pink);
+    line-height: 2rem;
+    font-size: calc(60% + 2vmin);
+}
+.index .introducao .topo .esquerda p span{
+    color: var(--dark-pink);
+    font-size: 100%;
+}
+.index .introducao .container .topo .direita{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+.index .introducao .container .topo .direita img{
+    width: 100%;
+    height: auto;
+}
+.index .introducao .container .baixo{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 0 15px;
+}
+.index .introducao .container .baixo li{
+    height: 50%;
+}
+.index .introducao .container .baixo li img{
+    height: 100%;
+    width: auto;
+}
+
+/* quem-somos */
+
+.index .quem-somos{
+    height: 80vh;
+    background-color: var(--good-white);
+}
+.index .quem-somos .container{
+    display: flex;
+    gap: 10%;
+}
+.index .quem-somos .esquerda{
+    flex: 1;
+}
+.index .quem-somos .esquerda a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;       
+}
+.index .quem-somos .esquerda a img{
+    max-width: 130%;
+    max-height: 130%;
+    z-index: 1;
+}
+.index .quem-somos .direita{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 2;
+    padding: 4rem 0;
+    gap: 3rem;
+}
+.index .quem-somos .direita h1{
+    font-family:"Dancing Script";
+    font-weight: 150;
+    color: var(--normal-pink);
+    font-size: calc(100% + 5vmin);
+}
+.index .quem-somos .direita p{
+    font-family:"Bentham";
+    text-justify: inter-cluster;
+    justify-content: justify;
+    text-align: justify;
+    font-size: calc(60% + 2vmin);
+}
+.index .quem-somos .direita a{
+    width: 35%;
+    height: auto;
+}
+
+/* frase */
+
+.index .frase{
+    position: relative;
+    height: 50vh;
+    background: linear-gradient(165deg, var(--normal-pink),var(--strong-pink));
+    background-size: 200% 200%;
+    background-position: 0 50%;
+}
+.index .frase .container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.index .frase .container .texto{
+    position: absolute;
+    width: 90%;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+.index .frase .galho{
+    position: absolute;
+    height: 125%;
+    width: auto;
+    top: -125px;
+    right: 0;
+}
+
+/* processo */
+
+.index .processo{
+    height: 100vh;
+    background-image: url(resources/images/background_processo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.index .processo .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem 0;
+    gap: 4rem;
+}
+.index .processo .container h1{
+    font-family: "Dancing Script";
+    font-weight: 150;
+    color: var(--normal-pink);
+    font-size: calc(60% + 5vmin);
+}
+.index .processo .container img{
+    max-height: 125%;
+    max-width: 125%;
+}
+.index .processo .container .img-mobile{
+    display: none;
+}
+.index .processo .container .img-desktop{
+    display: block;
+}
+
+/* cards */
+
+.index .cards{
+    background: linear-gradient(165deg, var(--normal-pink),var(--strong-pink));
+}
+.index .cards .container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.index .cards .container h1{
+    font-family:"Dancing Script";
+    color: var(--good-white);
+    font-size: calc(60% + 5vmin);
+    font-weight: 150;
+    margin: 2rem 0;
+}
+.index .cards .container ul{
+    height: 80%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+.index .cards .container ul li{
+    height: 17.5rem;
+    width: 17.5rem;
+}
+
+/* -------------------- historia -------------------- */
+
+/* introducao */
+
+.historia .introducao{
+    background-color: var(--light-pink);
+    display: flex;
+    flex-direction: column;
+}
+.historia .introducao .container .topo{
+    height: 75vh;
+    display: flex;
+}
+.historia .introducao .container .topo .centro{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+    padding: 4rem 0; 
+}
+.historia .introducao .container .topo .centro img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+.historia .introducao .container .topo .centro p{
+    font-family: "Bentham";
+    color: var(--strong-pink);
+    line-height: 2rem;
+    font-size: calc(60% + 2vmin);
+    text-align: center;
+}
+.historia .introducao .container .topo .centro p span{
+    color: var(--dark-pink);
+    font-size: 100%;
+}
+.historia .introducao .v {
+    width: 100%;
+}
+.historia .introducao .v img {
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* conteudo */
+
+.historia .conteudo {
+    background-color: var(--bad-white);
+}
+.historia .conteudo .topo .container {
+    display: flex;
+    gap: 10%;
+}
+.historia .conteudo .topo .container .esquerda {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.historia .conteudo .topo .container .esquerda a {
+    justify-content: center;
+    align-items: center;
+    height: 100%;      
+}
+.historia .conteudo .topo .container .esquerda a img {
+    max-width: 120%;
+    max-height: 120%;
+}
+.historia .conteudo .topo .container .esquerda a:last-child img {
+    padding-left: 1.45rem;
+}
+.historia .conteudo .topo .container .direita {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 2;
+    padding: 4rem 0;
+    gap: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+.historia .conteudo .topo .container .direita h1 {
+    font-family:"Dancing Script";
+    font-weight: 150;
+    color: var(--normal-pink);
+    font-size: calc(100% + 5vmin);
+}
+.historia .conteudo .topo .container .direita p {
+    font-family:"Bentham";
+    text-justify: inter-cluster;
+    justify-content: justify;
+    text-align: justify;
+    font-size: calc(60% + 2vmin);
+}
+.historia .conteudo .topo .container .direita .flor-direita {
+    position: absolute;
+    right: -5rem;
+    top: 1rem;
+    opacity: 40%;
+}
+.historia .conteudo .baixo {
+    background-color: var(--bad-white);
+}
+.historia .conteudo .baixo .container {
+    display: flex;
+    gap: 10%;
+}
+.historia .conteudo .baixo .direita {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.historia .conteudo .baixo .direita a {
+    justify-content: center;
+    align-items: center;
+    height: 100%;      
+}
+
+.historia .conteudo .baixo .image-maior {
+    height: 456px;
+}
+
+.historia .conteudo .baixo .direita-centro {
+    height: 100%;
+    margin-right: 1rem;
+}
+
+.historia .conteudo .baixo .esquerda {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 2;
+    padding: 4rem 0;
+    gap: 3rem;
+    position: relative;
+}
+
+.historia .conteudo .baixo .esquerda h1 {
+    font-family:"Dancing Script";
+    font-weight: 150;
+    color: var(--normal-pink);
+    font-size: calc(100% + 5vmin);
+}
+
+.historia .conteudo .baixo .esquerda p {
+    font-family:"Bentham";
+    text-justify: inter-cluster;
+    justify-content: justify;
+    text-align: justify;
+    font-size: calc(60% + 2vmin);
+}
+
+.historia .conteudo .baixo .flor-esquerda {
+    position: absolute;
+    left: -5rem;
+    top: 5rem;
+    opacity: 40%;
+}
+
+/* Imagem Fim do Main */
+
+.historia .conteudo .frase .container img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+/* -------------------- parceiros -------------------- */
+
+/* conteudo */
+
+.parceiros .conteudo {
+    background-color: var(--light-pink);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.parceiros .conteudo .flor-esquerda{
+    position: absolute;
+    left: 0;
+    min-height: 100%;
+    width: auto;
+}
+.parceiros .conteudo .flor-direita{
+    position: absolute;
+    right: 0;
+    min-height: 100%;
+    width: auto;
+}
+.parceiros .conteudo .container .topo {
+    padding: 2rem 0;
+}
+.parceiros .conteudo .container .topo img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
+.parceiros .conteudo .container .meio {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    padding: 3%;
+}
+.parceiros .conteudo .container .baixo {
+    font-family: "Bentham";
+    color: var(--strong-pink);
+    line-height: 2rem;
+    font-size: calc(60% + 2vmin);
+    text-align: center;
+}
+.parceiros .conteudo .container .baixo p {
+    font-size: 25px;
+    padding: 3%;
+}
+
+/* -------------------- voluntario -------------------- */
+
+.voluntario .florEsquerda
+{
+    position: absolute;
+    left: 0;
+    min-height: 100%;
+    width: auto;
+    z-index: -1000;
+}
+.voluntario .florDireita
+{
+    position: absolute;
+    right: 0;
+    min-height: 100%;
+    width: auto;
+    z-index: -1000;
+}
+.voluntario .logoFormulario
+{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.voluntario form 
+{
+    background-color: var(--bad-white);
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px 20px;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    font-family: 'Didact Gothic', sans-serif;
+    border-radius: 10px;
+}
+.voluntario .campoForm input
+{
+    border: 0px var(--light-pink);
+    background-color: var(--light-pink);
+    padding: 10px;
+    display: block;
+    width: 95%;
+    font-weight: 100;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+.voluntario .campoForm label
+{
+    font-size:15px;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 15px;
+    color: rgb(20, 20, 20);
+}
+.voluntario .campoForm textarea 
+{
+    resize: none;
+    border: 0px var(--light-pink);
+    background-color: var(--light-pink);
+    border-radius: 3px;
+    font-family: inherit;
+    padding: 10px;
+    width: 95%;
+    font-weight: 100;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.voluntario .campoForm input[type=checkbox] 
+{
+    display: inline-block;
+    width: auto;  
+}
+.voluntario #botaoform
+{
+    display: block;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background: var(--strong-pink);
+    border: 3px solid var(--strong-pink);
+    color: var(--bad-white)fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 14px;
+    touch-action: manipulation;
+}
+.voluntario #botaoform:hover, #botaoform:active 
+{
+  background-color: initial;
+  color: var(--strong-pink);
+}
+.voluntario input[type=number]::-webkit-inner-spin-button 
+{ 
+    -webkit-appearance: none;
+}
+
+/* -------------------- FAQ -------------------- */
+
+/* conteudo */
+
+.faq .conteudo{
+    min-height: 85vh;
+    background-color:var(--light-pink);
+    position: relative;
+}
+.faq .conteudo .flor-esquerda{
+    position: absolute;
+    left: 0;
+    min-height: 100%;
+    width: auto;
+}
+.faq .conteudo .flor-direita{
+    position: absolute;
+    right: 0;
+    min-height: 100%;
+    width: auto;
+}
+.faq .conteudo .container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+.faq .conteudo .container .topo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.faq .conteudo .container .topo h1 {
+    font-family: "Dancing Script";
+    color: var(--strong-pink);
+    font-size: calc(60% + 5vmin);
+}
+.faq .conteudo .container .baixo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem 1rem;
+}
+.faq .conteudo .container .baixo .card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    background-color: var(--good-white);
+    border-radius: 15px;
+    padding: 1rem;
+    gap: 1rem;
+}
+.faq .conteudo .container .baixo .card h2{
+    margin: 0 auto;
+}
+.faq .conteudo .container .baixo .card img{
+    position: absolute;
+    left: -100px;
+}
+
+/* -------------------- contribua -------------------- */
+
+/* faixa */
+
+.contribua .faixa{
+    height: 70vh;
+    position: relative;
+    background-color: var(--light-pink);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0;
+    gap: 1rem;
+    overflow: hidden;
+}
+.contribua .faixa img{
+    position: absolute;
+}
+.contribua .faixa h1{
+    font-family: "Didact Gothic";
+    color: var(--good-white);
+    z-index: 1;
+    font-weight: 700;
+    font-size: calc(70% + 3vmin);
+}
+.contribua .faixa p{
+    font-family: "Didact Gothic";
+    color: #000000;
+    z-index: 1;
+    font-weight: 700;
+    font-size: calc(70% + 1vmin);
+}
+.contribua .gastos {
+    background-color: var(--light-pink);
+    padding: 2rem 0 8rem 0;
+}
+.contribua .gastos .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+.contribua .gastos .container img{
+    max-width: 50%;
+}
+.contribua .gastos .container .cards{
+    background: var(--light-pink);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+.contribua .gastos .container .cards img{
+    max-width: 25%;
+}
+
+/* mensagem */
+
+.contribua .mensagem{
+    position: relative;
+    height: 70vh;
+    background-color: var(--normal-pink);
+}
+.contribua .mensagem > img{
+    position: absolute;
+    max-height: 1000%;
+    width: 50%;
+    top: -5rem;
+    left: 0;
+}
+.contribua .mensagem .container{
+    display: flex;
+}
+.contribua .mensagem .container .esquerda{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contribua .mensagem .container .esquerda p{
+    font-family: "Didact Gothic";
+    font-weight: 700;
+    font-size: calc(60% + 5vmin);
+}
+.contribua .mensagem .container .esquerda p:first-child{
+    font-size: calc(60% + 3vmin);
+}
+.contribua .mensagem .container .esquerda p span{
+    font-size: 100%;
+    color: var(--good-white);
+}
+.contribua .mensagem .container .direita {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* doacao */
+
+.contribua .doacao{
+    background-color: var(--good-white);
+    font-family: "Didact Gothic";
+    font-weight: 700;
+}
+.contribua .doacao .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0;
+    gap: 2rem;
+}
+.contribua .doacao .container > img{
+   width: 25%;
+   height: auto;
+}
+.contribua .doacao .container .links{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.contribua .doacao .container .links img{
+    width: 15%;
+    height: auto;
+}
+
+/* -------------------- footer -------------------- */
+
+footer{
+    background: linear-gradient(90deg, #4e4e4e,#202020);
+    height: 37.5vh;
+    font-family: "Didact Gothic";
+}
+footer .container{
+    display: flex;
+    gap: 2rem;
+}
+footer .container .esquerda{
+    background-image: url(resources/images/footer_logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+    padding: 3rem 0;
+    gap: 1.5rem;
+}
+footer .container .esquerda img{
+    width: 70%;
+}
+footer .container .esquerda p{
+    color: var(--good-white);
+    font-size: calc(40% + 1vmin);
+}
+footer .container .esquerda ul{
+    display: flex;
+    gap: 0.5rem;
+}
+footer .container .meio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    gap: 1.5rem;
+}
+footer .container .meio h1{
+    font-size: calc(60% + 1vmin);
+    font-weight: 150;
+    color: var(--strong-pink);
+}
+footer .container .meio h2{
+    font-size: calc(60% + 1vmin);
+    font-family: "Dancing Script";
+    font-weight: 150;
+    color: var(--good-white);
+}
+footer .container .meio p{
+    font-size: calc(25% + 1vmin);
+    color: var(--good-white);
+}
+footer .container .meio img{
+    height: 40%;
+    max-width: 250%;
+}
+footer .container .direita{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: right;
+    flex: 1;
+
+}
+footer .container .direita ul{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+footer .container .direita ul li{
+    text-align: right;
+}
+footer .container .direita ul li a{
+    color: var(--good-white);
+}
+footer .container .direita ul li a::after{
+    content:" •";
+}
+
+/* -------------------- Media -------------------- */
+
+@media (max-width: 984px){
+    
+    header .container .nav > ul > li:first-child{
+        flex: 4;
+    }
+    header .container .nav > ul > li:last-child{
+        flex: 4;
+    }
+    header .container .nav ul ul li{
+        height: auto;
+        display: inline;
+    }
+
+    .index .introducao .container .topo{
+        flex-direction: column;
+    }
+    .index .introducao .container .topo .direita{
+        display: none;
+    }
+    .index .introducao .container .topo .esquerda{
+        justify-content: center;
+        gap: 5rem;
+        padding: 0;
+    }
+    .index .quem-somos .esquerda {
+        display: none;
+    }
+    .index .quem-somos .direita h1 {
+        font-family: "Dancing Script";
+        color: var(--normal-pink);
+        font-size: calc(60% + 10vmin);
+    }
+    .index .frase .container .texto{
+        position: absolute;
+        width: 90%;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+    .index .frase .container .galho{
+        position: absolute;
+        height: 0;
+        width: 100%;
+        top: 0;
+        right: 0;
+    }
+    .index .processo .container img{
+        max-height: 100%;
+        max-width: 100%;
+    }
+    .index .processo .container .img-mobile{
+        display: block;
+    }
+    .index .processo .container .img-desktop{
+        display: none;
+    }
+    .index .cards .container ul li{
+        height: 12.5rem;
+        width: 12.5rem;
+    }
+
+    .historia .introducao .container .topo{
+        flex-direction: column;
+    }
+    .historia .introducao .container .topo .direita{
+        display: none;
+    }
+    .historia .introducao .container .topo .esquerda{
+        justify-content: center;
+        gap: 5rem;
+        padding: 0;
+    }
+    .historia .conteudo .topo .container .esquerda {
+        display: none;
+    }
+    .historia .conteudo .baixo .container .direita {
+        display: none;
+    }
+
+    .contribua .conteudo .flor-direita{
+        display: none;
+    }
+
+    .contribua .faixa{
+        height: 30vh;
+    }
+    .contribua .mensagem .container{
+        flex-direction: column;
+    }
+    .contribua .mensagem > img{
+        position: absolute;
+        max-height: 1000%;
+        width: 100%;
+        top: -5rem;
+        left: 0;
+    }
+    .contribua .mensagem .container .esquerda{
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+    }
+    .contribua .mensagem .container .direita{
+        flex: 1;
+    }
+    .contribua .mensagem .container .direita img{
+        width: 50%;
+    }
+
+    .voluntario form
+    {
+        width: 80%;
+        height: auto;
+        align-items: center;
+    }
+    .voluntario .logoFormulario
+    {
+        margin-right: 10px;
+        margin-left: 10px;
+        display: flex;  
+    }
+    .voluntario .florEsquerda
+    {
+        max-width: 1080px;  
+        width: 30%;
+        max-height: 100%;
+        min-height: auto;     
+    }
+    .voluntario .florDireita
+    {
+        margin-top: 20%;
+        max-width: 1080px;   
+        width: 30%;
+        max-height: 100%;  
+        min-height: auto;      
+    }
+
+    footer .container .esquerda{
+        padding: 0;
+    }
+}
